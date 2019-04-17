@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        html {
+            height: 600px;
+            width: 400px;
+        }
+        body {
+            color: #7c7c7c;
+            font-family: sans-serif, arial;
+            margin: 0;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            height: 591px;
+            width: 400px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            margin: 0;
+        }
+
+        .feed {
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+            border-radius: 3px;
+            margin: 10px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        #items {
+            padding-bottom: 30px;
+            transform: scaleY(0);
+            transition: transform 300ms ease;
+            transform-origin: center top;
+        }
+
+        #items.loaded {
+            transform: scaleY(1);
+        }
+
+        .feed #items:empty {
+            padding-bottom: 0;
+        }
+
+        .feed .meta {
+            background: #494860;
+            padding: 100px 10px 100px 100px;
+            box-shadow: 0px 2px 6px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .feed .meta .meta-title {
+            margin: 0;
+            font-weight: 200;
+            color: #fff;
+        }
+
+        .feed .meta .hr {
+            margin: 0;
+            border-bottom: 1px solid #d56727;
+        }
+
+        .feed .after {
+            content: "";
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #d56727;
+            position: absolute;
+            top: 22px;
+            left: 63px;
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.45);
+        }
+
+        .feed .before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 87px;
+            top: 30px;
+            bottom: 0;
+            width: 0;
+            border-left: 1px solid #d56727;
+        }
+
+        .feed .entry {
+            padding: 0 10px 0 105px;
+            position: relative;
+        }
+
+        .feed .entry .before {
+            content: "";
+            position: absolute;
+            left: 77px;
+            top: 1px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ed802c;
+        }
+
+        .feed .entry .timestamp {
+            position: absolute;
+            left: 24px;
+            top: -8px;
+            background: #ed802c;
+            border-radius: 10px;
+            padding: 7px;
+            font-size: 1.4em;
+            color: #fff;
+        }
+
+        .feed .entry .entry-title {
+            font-size: 1.2em;
+        }
+
+        .open-with-newsfeeder-button {
+            margin-top: 30px!important;
+            margin-left: 100px!important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="feed">
+        <div class="before"></div>
+        <div class="meta">
+            <a target="_blank">
+                <h1 class="meta-title"></h1>
+            </a>
+            <div class="hr"></div>
+        </div>
+        <div id="items"></div>
+        <div class="after"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
