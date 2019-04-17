@@ -24,5 +24,14 @@
     "html2javascript": "^1.0.3",
     "mustache2js-loader": "^1.0.8",
     "open-with-newsfeeder-btn": "^1.0.5"
+  },
+  "homepage": "https://github.com/LesterGallagher/chrome-extension-rss-reader",
+  "bugs": {
+    "url": "https://github.com/LesterGallagher/chrome-extension-rss-reader/issues",
+    "email": "chrome-extension-rss-reader@esstudio.site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LesterGallagher/chrome-extension-rss-reader"
   }
 }
